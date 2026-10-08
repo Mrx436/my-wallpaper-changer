@@ -1,5 +1,5 @@
 #!/run/current-system/sw/bin/bash
-max_open_windows=3
+max_open_windows=5
 window_count=""
 pid_mpv=-1
 pid_swaybd=-1
@@ -28,7 +28,7 @@ echo "workspace: $workspace"
     echo "real pid: $(pgrep "mpvpaper")"
 
     if [ $pid_mpv -lt 0 ] && [[ ! $(pgrep "mpvpaper") ]]; then
-       mpvpaper -f -v -s -o "no-audio loop" eDP-1 /nix/store/3494wk2ga1mh1qn7a7f657p3dg2k4ap9-my_wallpaperes-v1.0/my_wallpaperes/torii-gate-forest-moewalls-com.mp4
+       mpvpaper -f -v -s -o "no-audio loop" eDP-1 /nix/store/6a09imb0zs13bz5av7wpjrx1vdy06p0r-my_wallpaperes-v1.1/my_wallpaperes/azure-horizon.1920x1080.mp4
        pid_mpv=$(pgrep "mpvpaper")
     elif [ $pid_mpv -gt 0 ] && [[ ! $(pgrep "mpvpaper") ]]; then
        pid_mpv=-1
